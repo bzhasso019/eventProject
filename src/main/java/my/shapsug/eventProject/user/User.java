@@ -28,4 +28,7 @@ public class User {
 
     @Column(name = "phoneNumber")
     private String phoneNumber;
+
+    @Column(name = "isDeleted")
+    private boolean isDeleted;
 }

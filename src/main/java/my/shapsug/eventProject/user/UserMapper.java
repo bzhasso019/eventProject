@@ -11,6 +11,7 @@ public class UserMapper {
         user.setUsername(request.getUsername());
         user.setPhoneNumber(request.getPhoneNumber());
         user.setUserType(request.getUserType());
+        user.setDeleted(request.isDeleted());
 
         return user;
     }
@@ -22,6 +23,7 @@ public class UserMapper {
         response.setUsername(user.getUsername());
         response.setPhoneNumber(user.getPhoneNumber());
         response.setUserType(user.getUserType());
+        response.setDeleted(user.isDeleted());
 
         return response;
     }

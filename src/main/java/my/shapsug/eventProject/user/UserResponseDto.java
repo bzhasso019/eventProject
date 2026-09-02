@@ -15,5 +15,6 @@ public class UserResponseDto {
     private String username;
     private String phoneNumber;
     private UserType userType;
+    private boolean isDeleted;
 
 }
