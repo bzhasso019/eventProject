@@ -1,10 +1,12 @@
 package my.shapsug.eventProject.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+@Service
 public class UserService {
 
     @Autowired
@@ -13,6 +15,11 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
+
+    public UserResponseDto getUserById(long id) {
+        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException("Пользователь с айди " + id + " не найден!"));
+        return userMapper.entityToResponse(user);
+    }
 
     @Transactional
     public UserResponseDto deleteUserById(long id) {

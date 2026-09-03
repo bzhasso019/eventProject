@@ -1,12 +1,10 @@
 package my.shapsug.eventProject.event;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
+@Entity
 @Table(name = "event")
 public class Event {
     @Id
@@ -15,6 +13,9 @@ public class Event {
 
     @Column(name = "eventName")
     private String eventName;
+
+    @Column(name = "placeId")
+    private long placeId;
 
     @Column(name = "eventDate")
     private Date eventDate;

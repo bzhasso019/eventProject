@@ -1,19 +1,18 @@
 package my.shapsug.eventProject.place;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import my.shapsug.eventProject.user.UserType;
 
 @Table(name = "place")
+@Entity
+@Setter
+@Getter
 public class Place {
     @Id
     @GeneratedValue
     private long id;
-
-    @Column(name = "eventId")
-    private long eventId;
 
     @Column(name = "placeType")
     private PlaceType placeType;

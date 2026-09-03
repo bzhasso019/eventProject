@@ -38,4 +38,12 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping
+    public ResponseEntity<UserResponseDto> getUser(@PathVariable("id") long id) {
+        UserResponseDto response = userService.getUserById(id);
+        return ResponseEntity.ok(response);
+//        return ResponseEntity.status(HttpStatus.OK).body(response);
+
+    }
+
 }

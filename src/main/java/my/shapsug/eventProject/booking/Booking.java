@@ -1,11 +1,9 @@
 package my.shapsug.eventProject.booking;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Table(name = "booking")
+@Entity
 public class Booking {
     @Id
     @GeneratedValue
