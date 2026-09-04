@@ -11,6 +11,8 @@ public class PlaceMapper {
         currentPlace.setPlaceNumber(request.getPlaceNumber());
         currentPlace.setPlaceType(request.getPlaceType());
         currentPlace.setStatus(request.getStatus());
+        currentPlace.setEventId(request.getEventId());
+        currentPlace.setPrice(request.getPrice());
 
         return currentPlace;
     }
@@ -21,6 +23,8 @@ public class PlaceMapper {
         response.setPlaceNumber(place.getPlaceNumber());
         response.setStatus(place.getStatus());
         response.setPlaceType(place.getPlaceType());
+        response.setEventId(place.getEventId());
+        response.setPrice(place.getPrice());
 
         return response;
 

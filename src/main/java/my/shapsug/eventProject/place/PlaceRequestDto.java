@@ -11,6 +11,8 @@ import lombok.Setter;
 public class PlaceRequestDto {
 
     private PlaceType placeType;
+    private long eventId;
     private int placeNumber;
     private String status;
+    private double price;
 }

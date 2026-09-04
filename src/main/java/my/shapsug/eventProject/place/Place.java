@@ -14,6 +14,9 @@ public class Place {
     @GeneratedValue
     private long id;
 
+    @Column(name = "eventId")
+    private long eventId;
+
     @Column(name = "placeType")
     private PlaceType placeType;
 
@@ -22,4 +25,7 @@ public class Place {
 
     @Column(name = "status")
     private String status;
+
+    @Column(name = "price")
+    private double price;
 }

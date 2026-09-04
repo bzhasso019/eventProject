@@ -3,4 +3,6 @@ package my.shapsug.eventProject.place;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PlaceRepository extends JpaRepository<Place, Long> {
+
+    boolean existsByPlaceNumber(int placeNumber);
 }

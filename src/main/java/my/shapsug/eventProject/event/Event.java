@@ -14,13 +14,13 @@ public class Event {
     @Column(name = "eventName")
     private String eventName;
 
-    @Column(name = "placeId")
-    private long placeId;
-
     @Column(name = "eventDate")
     private Date eventDate;
 
     @Column(name = "eventType")
     private String eventType;
+
+    @Column(name = "seatsNumber")
+    private int seatsNumber;
 
 }

@@ -30,6 +30,7 @@ public class UserService {
         }
 
         User deletedUser = userRepository.save(currentUser);
+        deletedUser.setDeleted(true);
         return userMapper.entityToResponse(deletedUser);
     }
 
@@ -41,7 +42,6 @@ public class UserService {
         }
 
         User currentUser = userMapper.requestToEntity(request);
-        currentUser.setDeleted(true);
         currentUser.setId(id);
 
         userRepository.save(currentUser);

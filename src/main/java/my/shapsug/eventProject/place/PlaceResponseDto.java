@@ -11,7 +11,9 @@ import lombok.Setter;
 public class PlaceResponseDto {
 
     private long id;
+    private long eventId;
     private PlaceType placeType;
     private int placeNumber;
     private String status;
+    private double price;
 }
